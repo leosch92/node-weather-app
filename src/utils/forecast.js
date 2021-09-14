@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find forecast for given latitude and longitude. Please provide different data.', undefined)
         } else {
             const current = response.body.current;
-            callback(undefined, `It is currently ${current.temperature} degrees out. It feels like ${current.feelslike} degrees out.`)
+            callback(undefined, `It is currently ${current.temperature} degrees out. It feels like ${current.feelslike} degrees out. The humidity is ${current.humidity}%.`)
         }
     })
 }
